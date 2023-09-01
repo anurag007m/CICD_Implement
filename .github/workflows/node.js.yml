@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: SSH deploy
-        uses: appleboy/ssh-action@master
+        uses: anurag007m/CICD_Implement@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
@@ -49,5 +49,5 @@ jobs:
              cd GIT_CICD
              git pull origin master
              npm install
-             npm run build
+             npm run start
              pm2 restart api
